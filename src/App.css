@@ -1,38 +1,131 @@
-.App {
-  text-align: center;
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100%;
+    background: #545f7d;
+    position: fixed;
+    text-align: center;
+}
+.screen {
+    height: 180px;
+    width: 320px;
+    background-blend-mode: screen;
+    background-blend-mode: multiply;
+    background-blend-mode: overlay;
+    background-blend-mode: darken;
+    background-blend-mode: soft-light;
+    background-blend-mode: luminosity;
+    background: linear-gradient(red, transparent), linear-gradient(to top left, lime, transparent),
+        linear-gradient(to top right, blue, transparent);
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.intro {
+    color: darkturquoise;
+    font-style: oblique;
+    font-size: 20px;
+    text-align: center;
+}
+.form-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.btn-start {
+    margin: 0 auto;
+    display: block;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navbar {
+    position: absolute;
+    left: 970px;
+    top: 200px;
+    color: #fefefe;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.game {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    height: 792px;
 }
 
-.App-link {
-  color: #61dafb;
+.board {
+    height: 330px;
+    width: 330px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.tile {
+    width: 110px;
+    height: 110px;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 5em;
+    font-weight: bold;
+    background-color: #44425e;
+    color: #c4c4c4;
+}
+
+#tile0 {
+    border-right: 4px solid #a855c1;
+    border-bottom: 4px solid #a855c1;
+}
+#tile1 {
+    border-left: 4px solid #a855c1;
+    border-right: 4px solid #a855c1;
+    border-bottom: 4px solid #a855c1;
+}
+#tile2 {
+    border-left: 4px solid #a855c1;
+    border-bottom: 4px solid #a855c1;
+}
+#tile3 {
+    border-top: 4px solid #a855c1;
+    border-right: 4px solid #a855c1;
+    border-bottom: 4px solid #a855c1;
+}
+#tile4 {
+    border: 4px solid #a855c1;
+}
+#tile5 {
+    border-top: 4px solid #a855c1;
+    border-left: 4px solid #a855c1;
+    border-bottom: 4px solid #a855c1;
+}
+#tile6 {
+    border-top: 4px solid #a855c1;
+    border-right: 4px solid #a855c1;
+}
+#tile7 {
+    border-top: 4px solid #a855c1;
+    border-right: 4px solid #a855c1;
+    border-left: 4px solid #a855c1;
+}
+#tile8 {
+    border-top: 4px solid #a855c1;
+    border-left: 4px solid #a855c1;
+}
+
+.game p {
+    font-size: 2em;
+    font-weight: bold;
+}
+
+*,
+::after,
+::before {
+    box-sizing: border-box;
+}
+.game {
+    background: #545f7d;
 }
