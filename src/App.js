@@ -62,10 +62,8 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                {showEndgame ? (
-                    <Endgame winner={winner} endgame={this.handleEndgame} />
-                ) : null}
-                {showLogin ? <Login names={this.handleName} /> : null}
+                {showEndgame && <Endgame winner={winner} endgame={this.handleEndgame} /> }
+                {showLogin && <Login names={this.handleName} />}
                 <Navbar
                     ties={ties}
                     userName1={userName1}

@@ -5,15 +5,15 @@ class Login extends React.Component {
         player1: "",
         player2: "",
     };
-    handleChange = (event) => {
-        console.log(event.target.value);
+    handleChange = (e) => {
+        console.log(e.target.value);
 
-        let player = event.target.id;
-        this.setState({ [player]: event.target.value });
+        let player = e.target.id;
+        this.setState({ [player]: e.target.value });
     };
 
-    handleClick = (event) => {
-        event.preventDefault();
+    handleClick = (e) => {
+        e.preventDefault();
         const { player1, player2 } = this.state;
         this.props.names(player1, player2);
     };
