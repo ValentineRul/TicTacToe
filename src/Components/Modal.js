@@ -1,6 +1,6 @@
 import React from "react";
 
-class Login extends React.Component {
+class Modal extends React.Component {
     state = {
         player1: "",
         player2: "",
@@ -58,4 +58,4 @@ class Login extends React.Component {
     }
 }
 
-export default Login;
+export default Modal;

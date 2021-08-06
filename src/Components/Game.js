@@ -17,10 +17,9 @@ class Game extends React.Component {
 
     render() {
         const { player1, player2 } = this.state;
-        const { userName1, userName2, endgame } = this.props;
+        const { endgame } = this.props;
         return (
             <div className="game">
-                
                 <Board
                     turn={this.handleTurn}
                     player1={player1}

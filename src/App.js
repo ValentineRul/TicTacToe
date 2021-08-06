@@ -1,7 +1,7 @@
 import React from "react";
-import Navbar from "./Components/Navbar";
+import Stat from "./Components/Stat";
 import Game from "./Components/Game";
-import Login from "./Components/Login";
+import Modal from "./Components/Modal";
 import Endgame from "./Components/Endgame";
 import "./App.css";
 
@@ -14,7 +14,7 @@ class App extends React.Component {
         winner: "",
         player1: 0,
         player2: 0,
-        showLogin: true,
+        showModal: true,
         showEndgame: false,
     };
     //! Показ кто победил или ничья
@@ -34,13 +34,13 @@ class App extends React.Component {
         });
     };
 
-    //!Имена с формы кидает в state, которые могут передаваться в Navbar
+    //!Имена с формы кидает в state, которые могут передаваться в Stat
 
     handleName = (player1, player2) => {
         this.setState({
             userName1: player1,
             userName2: player2,
-            showLogin: false,
+            showModal: false,
         });
     };
     //!Endgame boolean
@@ -53,7 +53,7 @@ class App extends React.Component {
             ties,
             player1,
             player2,
-            showLogin,
+            showModal,
             userName1,
             userName2,
             showEndgame,
@@ -62,9 +62,11 @@ class App extends React.Component {
 
         return (
             <div className="App">
-                {showEndgame && <Endgame winner={winner} endgame={this.handleEndgame} /> }
-                {showLogin && <Login names={this.handleName} />}
-                <Navbar
+                {showEndgame && (
+                    <Endgame winner={winner} endgame={this.handleEndgame} />
+                )}
+                {showModal && <Modal names={this.handleName} />}
+                <Stat
                     ties={ties}
                     userName1={userName1}
                     userName2={userName2}
